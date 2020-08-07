@@ -123,12 +123,6 @@ plot_grid(
 )
 
 
-install.packages("ARTool")
-library(ARTool)
-art(inverts_5)
-
-
-
 ## Bray-Curtis distances between samples
 dis <- vegdist(inverts_5)
 
@@ -138,9 +132,7 @@ mod
 anova(mod) #so you shouldn't run a permanova...
 
 
-
-
-#run a permanova
+#run a permanova anyway to see what's up
 
 #even when you tell it the model to account for four factors, the output is only three
 #the issue is that it's comparing by factors by contrasts among them
