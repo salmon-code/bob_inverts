@@ -81,13 +81,9 @@ dim(inverts_10)
 #excluding taxa based on increasingly strict requirements of presence in samples 
 #(5, 10, 15 etc. percent)
 
-
-inverts_30 <- inverts_wide[,colSums(inverts_wide > 0) >= 96]
-
-which(rowSums(inverts_30) == 0)
-inverts_30_del <- inverts_30[-58,]
-
-
+inverts_5 <- inverts_wide[,colSums(inverts_wide > 0) >= 16]
+inverts_10 <- inverts_wide[,colSums(inverts_wide > 0) >= 32]
+inverts_15 <- inverts_wide[,colSums(inverts_wide > 0) >= 48]
 
 
 #no covergence
